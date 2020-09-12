@@ -57,7 +57,8 @@ img {
 }
 
 .container {
-  max-width: 1148px;
+  max-width: 1350px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,4 +72,328 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.about-address-wrapper {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  background-color: #F9F8F8;
+}
+
+.about-address {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333;
+}
+
+.address-link {
+  margin-right: 106px;
+  color: #333;
+  text-decoration: none;
+  margin-left: 180px;
+} 
+
+.address-link::before {
+  display: inline-block;
+  margin-right: 9px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/home.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.tel-numbers {
+  display: block;
+  margin: 0;
+  margin-right: 98px;
+}
+
+.tel-numbers::before {
+  display: inline-block;
+  margin-right: 9px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/tel.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+
+.tel-numbers-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.tel-numbers-link ~ .tel-numbers-link::before {
+  margin-right: 9px;
+  margin-left: 9px;
+  background-color: #ffbd54;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  content: "";
+}
+
+.tel-numbers-link:hover {
+  color: #ffdb54;
+}
+
+.tel-numbers-link:active {
+  color: #333333;
+  opacity: 0.5;
+}
+
+
+.working-days::before {
+  display: inline-block;
+  margin-right: 7px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/days.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.working-days-full {
+  margin-right: 17px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.working-days-full:last-child {
+  margin-right: 0;
+}
+
+.white-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.logo-link {
+  position: absolute;
+  z-index: 1;
+  width: 178px;
+  height: 86px;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo-link:active {
+  opacity: 0.5;
+}
+
+.logo {
+  display: block;
+  width: 178px;
+  height: 86px;
+}
+
+.header-list {
+  margin: 0;
+  margin-left: 115px;
+  margin-right: 133px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header-link {
+  padding: 19px 27px;
+  white-space: nowrap;
+  color: #333333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: #ffbd54;
+}
+
+.header-link:active {
+  background-color: #ffbd54;
+  opacity: 0.5;
+}
+
+.header-link-active:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/fish.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.header-ask-question {
+  white-space: nowrap;
+  color: #333333;
+  font-weight: 500;
+  padding: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-ask-question:hover {
+  color: #fff;
+  background-color: #333333;
+}
+
+.header-ask-question:active {
+  opacity: 0.5;
+}
+
+.header-ask-question:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px;
+  width: 23px;
+  height: 21px;
+  background-image: url(../img/dog-foot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.about-site-wrapper {
+  min-height: 924px;
+  background-color: #e5e5e5;
+}
+
+.about-site {
+  min-height: 924px;
+  background-image: url(../img/about-site.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+.about-site-contain {
+  width: 610px;
+  margin-left: auto;
+  padding-top: 146px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.about-site-heading {
+  margin: 0;
+  font-size: 70px;
+  line-height: 64px;
+  color: #333333;
+  margin-bottom: 29px;
+}
+
+.about-site-heading-blue {
+  color: rgb(65, 236, 241);
+}
+
+.about-site-text {
+  margin: 0;
+  margin-bottom: 38px;
+  width: 495px;
+
+  color: #949494;
+}
+
+.about-site-link {
+  padding: 15px 48px;
+  color: #FFFFFF;
+  background-color: #333333;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-site-link:hover {
+  color: #333333;
+  background-color: #FFBD54;
+}
+
+.about-site-link:active {
+  opacity: 0.5;
+}
+
+.clinic-info-hr {
+  border: 1px solid #DBDBDB;
+  width: 140px;
+}
+
+.clinic-info-comment {
+  margin: 45px auto;
+  width: 845px;
+  text-align: center;
+}
+
+.clinic-info-comment::before {
+  display: block;
+  transform: rotate(-180deg);
+  margin-right: 14px;
+  width: 51px;
+  height: 42px;
+  top: 0;
+  right: 0;
+  background-image: url(../img/tirnoq.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.clinic-info-comment::after {
+  display: block;
+  margin-right: 14px;
+  width: 51px;
+  height: 42px;
+  left: 100%;
+  bottom: 0;
+  background-image: url(../img/tirnoq.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.clinic-info-autor {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #333333;
 }
