@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veterinariya</title>
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/styles.min.css"> -->
 </head>
 <body>
   
@@ -219,7 +219,7 @@
             
             <form class="be-in-touch-form" action="https://echo.htmlacademy.ru" method="POST">
               <label class="be-in-touch-label" for="be_in_touch_email">
-                <input class="be-in-touch-input" type="email" id="be_in_touch_email" name="email_address" placeholder="Укажите Ваш email адрес">
+                <input class="be-in-touch-input" type="email" id="be_in_touch_email" name="email_address" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" placeholder="Укажите Ваш email адрес" required>
               </label><!-- be-in-touch-label -->
               
               <button class="be-in-touch-follow" type="submit">Подписаться</button>
@@ -271,76 +271,94 @@
             </ul><!-- End of this-list <-->  
           </section><!-- usefull-articles -->
           
-          <section class="clinic-feedback">
-            <a class="clinic-feedback-card-link" href="#">
-              <img class="clinic-feedback-card-img" src="#" width="462" height="652" alt="Clinic card">
-            </a>
-            
-            <div class="clinic-feedback-right">
-              <h3 class="clinic-feedback-heading">Обратная связь</h3>
-              <p class="clinic-feedback-text">При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
-              
-              <form class="clinic-feedback-form" action="https://echo.htmlacademy.ru" method="POST">
-                <label class="clinic-feedback-name-label" for="clinic_feedback_name">
-                  <input class="clinic-feedback-name-input" type="text" id="clinic_feedback_name" name="name" placeholder="Ваше имя">
-                </label><!-- clinic-feedback-name-label -->
+          <div class="clinc-ontainer" >
+            <div class="clinic-feedback-wrapper" >
+              <section class="clinic-feedback">
+                <a class="clinic-feedback-card-link" target="_blank" href="https://www.google.com/maps/place/Najot+Ta'lim+o'quv+markazi/@41.349441,69.2149287,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8dcc657cf5cf:0xad5fe8fdc976a1fd!8m2!3d41.349437!4d69.2171174">
+                  <img class="clinic-feedback-card-img" src="img/big-card.jpg" width="462" height="652" alt="Clinic card">
+                </a>
                 
-                <label class="clinic-feedback-email-label" for="clinic_feedback_email">
-                  <input class="clinic-feedback-email-input" type="email" id="clinic_feedback_email" name="email_address" placeholder="Email для обратной связи">
-                </label><!-- clinic-feedback-email-label -->
-                
-                <label class="clinic-feedback-text-label" for="clinic_feedback_text">
-                  <input class="clinic-feedback-text-input" type="text" id="clinic_feedback_text" name="text" placeholder="Опишите Ваш вопрос. Например: в каком возрасте можно прививать от бешенства?">
-                </label><!-- clinic-feedback-text-label -->
-                
-                <button class="clinic-feedback-ask-question" type="submit">Задать нам вопрос</button>
-              </form><!-- clinic-feedback-form -->
-            </div><!-- clinic-feedback-right -->
-          </section><!-- clinic-feedback -->
+                <div class="clinic-feedback-right">
+                  <h3 class="clinic-feedback-heading">Обратная связь</h3>
+                  <p class="clinic-feedback-text">При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
+                  
+                  <form class="clinic-feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+                    <label class="clinic-feedback-name-label" for="clinic_feedback_name">
+                      <input class="clinic-feedback-name-input" type="text" id="clinic_feedback_name" name="name" placeholder="Ваше имя">
+                    </label><!-- clinic-feedback-name-label -->
+                    
+                    <label class="clinic-feedback-email-label" for="clinic_feedback_email">
+                      <input class="clinic-feedback-email-input" type="email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" id="clinic_feedback_email" name="email_address" placeholder="Email для обратной связи" required>
+                    </label><!-- clinic-feedback-email-label -->
+                    
+                    <label class="clinic-feedback-text-label" for="clinic_feedback_text">
+                      <input class="clinic-feedback-text-input" type="text" id="clinic_feedback_text" name="text" placeholder="Опишите Ваш вопрос. Например: в каком возрасте можно прививать от бешенства?">
+                    </label><!-- clinic-feedback-text-label -->
+                    
+                    <button class="clinic-feedback-ask-question" type="submit">Задать нам вопрос</button>
+                  </form><!-- clinic-feedback-form -->
+                </div><!-- clinic-feedback-right -->
+              </section><!-- clinic-feedback -->
+            </div>
+          </div> <!-- clinic-feedback-wrapper -->
         </main><!-- site-main -->
         
         
         <!-- ============
           SITE FOOTER
           ============= -->
-          <footer class="site-footer container">
-            <a class="logo-link" href="index.html">
-              <img class="logo" src="img/logo.svg" alt="Logo icon" width="158" height="77">
-            </a>
-            
-            <ul class="header-list">
-              <li class="header-item">
-                <a href="#" class="header-link">Главная</a>
-              </li>
-              <li class="header-item">
-                <a href="#" class="header-link">О Клинике</a>
-              </li>
-              <li class="header-item">
-                <a href="#" class="header-link">Наши Услуги</a>
-              </li>
-              <li class="header-item">
-                <a href="#" class="header-link">Полезные Статьи</a>
-              </li>
-              <li class="header-item">
-                <a href="#" class="header-link">FAQ</a>
-              </li>
-              <li class="header-item">
-                <a href="#" class="header-link">Контакты</a>
-              </li>
-            </ul><!-- End of header-list -->
-            
-            <p class="working-days">
-              <span class="working-days-full">Пн - Пт 8:00 - 18:00</span>
-              <span class="working-days-part">Сб - Вс 8:00 - 14:00</span>
-            </p><!-- working-days -->
-            
-            <p class="address"><a href="#">г. Мариуполь, проспект Победы, 48а</a></p><!-- address -->
-            
-            <p class="tel-numbers">
-              <a href="tel:(067)6347574">(067) 634 -75 - 74</a>
-              <a href="tel:(0637)570131">(0637) 57 - 01 - 31</a>
-              <a href="tel:(098)2664389">(098) 266 - 43 - 89</a>
-            </p><!-- tel-numbers -->
-          </footer><!-- site-footer -->
+          <footer class="site-footer-wrapper">
+            <div class="container">
+              <div class="site-footer">
+                <a class="footer-logo-link" href="index.html">
+                  <img class="footer-logo" src="img/logo.svg" alt="Logo icon" width="158" height="77">
+                </a>
+                
+                <ul class="footer-list footer-list-1">
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">Главная</a>
+                  </li>
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">О Клинике</a>
+                  </li>
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">Наши Услуги</a>
+                  </li>
+                </ul><!-- End of header-list -->
+                
+                <ul class="footer-list footer-list-2">
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">Полезные Статьи</a>
+                  </li>
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">FAQ</a>
+                  </li>
+                  <li class="footer-item">
+                    <a href="#" class="footer-link">Контакты</a>
+                  </li>
+                </ul><!-- End of this-list <-->  
+
+
+                <p class="working-days-1">
+                  <p class="working-days-full-1"><strong>Пн - Пт</strong> 8:00 - 18:00</p>
+                  <!-- <p class="working-days-full-2"><strong>Сб - Вс</strong> 8:00 - 14:00</p> -->
+                </p><!-- working-days -->
+                
+                <a class="footer-address-link"  href="#">г. Мариуполь</a>
+                
+                <div class="footer-tel-numbers">
+                  <p class="footer-tel-numbers-text footer-tel-numbers-text-1">
+                    <a class="footer-tel-number-link" href="tel:(067)6347574">(067) 634 -75 - 74</a>
+                  </p>
+                  <p class="footer-tel-numbers-text footer-tel-numbers-text-2">
+                    <a class="footer-tel-number-link" href="tel:(0637)570131">(0637) 57 - 01 - 31</a>
+                  </p>
+                  <p class="footer-tel-numbers-text footer-tel-numbers-text-2">
+                    <a class="footer-tel-number-link" href="tel:(098)2664389">(098) 266 - 43 - 89</a>
+                  </p>
+                </div><!-- tel-numbers -->
+              </div><!-- site-footer -->
+            </div><!-- container -->
+          </footer><!-- site-footer-wrapper -->
         </body>
         </html>
