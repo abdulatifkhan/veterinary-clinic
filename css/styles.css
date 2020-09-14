@@ -179,6 +179,7 @@ img {
   margin-right: 17px;
   line-height: 21px;
   font-weight: 500;
+  width: 127px;
 }
 
 .working-days-full:last-child {
@@ -377,7 +378,7 @@ img {
   margin-right: 14px;
   width: 51px;
   height: 42px;
-  left: 100%;
+  left: 0;
   bottom: 0;
   background-image: url(../img/tirnoq.png);
   background-repeat: no-repeat;
@@ -397,3 +398,234 @@ img {
   line-height: 26px;
   color: #333333;
 }
+
+.clinic-feedback-wrapper {
+  min-height: 652px;
+  background-image: url(../img/form-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+.clinic-container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clinic-feedback {
+  display: flex;
+}
+
+.clinic-feedback-card-img {
+  display: block;
+  margin-right: 166px;
+}
+
+.clinic-feedback-right {
+  width: 380px;
+}
+
+.clinic-feedback-heading {
+  margin: 0;
+  margin-top: 62px;
+  margin-bottom: 14px;
+  font-size: 48px;
+  line-height: 62px;
+  color: #FFFFFF;
+}
+
+.clinic-feedback-text {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+  width: 334px;
+}
+
+.clinic-feedback-name-input,
+.clinic-feedback-email-input {
+  margin-bottom: 14px;
+  width: 375px;
+  height: 50px;
+  padding: 16px 22px;
+}
+
+.clinic-feedback-email-input:valid {
+  color: #00B031;
+}
+
+.clinic-feedback-email-input:invalid {
+  color: #D81D04;
+}
+
+.clinic-feedback-text-input {
+  width: 375px;
+  height: 165px;
+  padding: 17px 22px;
+  margin-bottom: 30px;
+}
+
+.clinic-feedback-ask-question {
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #FFBD54;
+  border-radius: 0px;
+  width: 226px;
+  height: 50px;
+}
+/* SITE FOOTER */
+
+.site-footer-wrapper {
+  background-color: #F3F3F3;
+  border: 1px solid #EBEBEB;
+}
+
+.site-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 62px;
+  padding-bottom: 23px;
+}
+
+.footer-logo-link {
+  width: 158px;
+  height: 77px;
+  margin-right: 67px;
+}
+
+.footer-logo {
+  width: 158px;
+  height: 77px;
+}
+
+.footer-list {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  width: 86px;
+  list-style-type: none;
+}
+
+.footer-list-1 {
+  margin-right: 87px;
+}
+
+.footer-list-2 {
+  margin-right: 127px;
+}
+
+.footer-item {
+  margin-bottom: 14px;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0px;
+}
+
+.footer-link {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #333;
+}
+
+/* .footer-working-days,
+.footer-working-days-full,
+.footer-working-days-part {
+  margin: 0;
+  white-space: nowrap;
+  width: 150px;
+  height: 40px;
+}
+
+.working-days-weeks {
+  font-weight: 500;
+}
+
+.footer-working-days:before {
+  display: flex;
+  margin-right: 7px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/days.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+} */
+
+.working-days-1 {
+  margin: 0;
+  /* margin-right: 122px; */
+}
+
+.working-days-1::before{
+display: inline-block;
+margin-right: 7px;
+width: 14px;
+height: 13px;
+background-image: url(../img/days.png);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: auto 100%;
+content: "";
+}
+
+.working-days-full-1,
+.working-days-full-2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.footer-address-link {
+  color: #333;
+  text-decoration: none;
+  width: 157px;
+  margin-left: 100px;
+} 
+
+.footer-address-link::before {
+  display: inline-block;
+  margin-right: 9px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/home.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.footer-tel-numbers-text-1::before {
+  display: inline-flex;
+  margin-right: 9px;
+  width: 14px;
+  height: 13px;
+  background-image: url(../img/tel.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  content: "";
+}
+
+.footer-tel-numbers-text {
+  margin: 0;
+}
+
+.footer-tel-number-link {
+  color: #474141;
+  text-decoration: none;
+}
+
+
+
+
