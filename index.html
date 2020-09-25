@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veterinariya</title>
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/styles.min.css"> -->
 </head>
 <body>
   
@@ -15,53 +15,80 @@
     ============= -->
     
     <header class="site-header">
-      
-      <div class="about-address-wrapper">
+      <div class="site-header__wrapper">
         <div class="container">
-          <div class="about-address">
-            <p class="address"><a class="address-link" href="#">г. Мариуполь, проспект Победы, 48а</a></p><!-- address -->
-            <p class="tel-numbers">
-              <a class="tel-numbers-link" href="tel:(067)6347574">(067) 634 -75 - 74</a>
-              <a class="tel-numbers-link" href="tel:(0637)570131">(0637) 57 - 01 - 31</a>
-              <a class="tel-numbers-link" href="tel:(098)2664389">(098) 266 - 43 - 89</a>
-            </p><!-- tel-numbers -->
-            <p class="working-days">
-              <span class="working-days-full"><strong>Пн - Пт</strong> 8:00 - 18:00</span>
-              <span class="working-days-part"><strong>Сб - Вс</strong> 8:00 - 14:00</span>
-            </p><!-- working-days -->
+          <div class="site-address site-header__address">
+            <p class="site-address__text"><a class="site-address__link" href="#">г. Мариуполь, проспект Победы, 48а</a></p><!-- address -->
+            
+            <section class="phones">
+              <ul class="tel-numbers__list">
+                <li class="tel-numbers__iteam">
+                  <a class="tel-numbers__link" href="tel:(067)6347574">(067) 634 -75 - 74
+                  </a>
+                </li>
+                <li class="tel-numbers__iteam">
+                  <a class="tel-numbers__link" href="tel:(0637)570131">
+                    (0637) 57 - 01 - 31
+                  </a>
+                </li>
+                <li class="tel-numbers__iteam">
+                  <a class="tel-numbers__link" href="tel:(098)2664389">
+                    (098) 266 - 43 - 89
+                  </a>
+                </li>
+              </ul><!-- tel-numbers__list -->
+            </section><!-- phones -->
+            
+            
+            <div class="working-days">
+              <h3 class="visually-hidden">Время приёма</h3>
+              
+              <div class="working-days__list">
+                <div class="working-days__iteam">
+                  <span class="working-days__weeks">Пн - Пт</span>
+                  <span class="working-days__hours">8:00 - 18:00</span>
+                </div><!-- working-days__iteam -->
+                <div class="working-days__iteam">
+                  <span class="working-days__weeks">Сб - Вс</span>
+                  <span class="working-days__hours">8:00 - 14:00</span>
+                </div><!-- working-days__iteam -->
+              </div><!-- working-days__list -->
+            </div><!-- working-days -->
           </div><!-- about-address -->
         </div><!-- container -->
       </div><!-- about-address-wrapper -->
       
       <div class="container">
-        <div class="white-header">
-          <a class="logo-link" href="index.html">
-            <img class="logo" src="img/logo.svg" alt="Logo icon" width="178" height="86">
-          </a>
+        <nav class="sitenav sitenav__white">
+          <div class="logo">
+            <a class="logo__link" href="index.html">
+              <img class="logo__img" src="img/logo.svg" alt="Logo icon" width="178" height="86">
+            </a><!-- logo__link -->
+          </div><!-- logo -->
           
-          <ul class="header-list">
-            <li class="header-item">
-              <a class="header-link header-link-active" href="#">Главная</a>
+          <ul class="sitenav__list">
+            <li class="header__item">
+              <a class="header__link header__link--active" href="#">Главная</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">О Клинике</a>
+            <li class="header__item">
+              <a class="header__link" href="#">О Клинике</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Наши Услуги</a>
+            <li class="header__item">
+              <a class="header__link" href="#">Наши Услуги</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Полезные Статьи</a>
+            <li class="header__item">
+              <a class="header__link" href="#">Полезные Статьи</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">FAQ</a>
+            <li class="header__item">
+              <a class="header__link" href="#">FAQ</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Контакты</a>
+            <li class="header__item">
+              <a class="header__link" href="#">Контакты</a>
             </li>
-          </ul><!-- End of header-list -->
+          </ul><!-- End of header__list -->
           
-          <a class="header-ask-question" href="#">Задать вопрос</a>
-        </div><!-- white-header -->
+          <a class="header__ask-question" href="#">Задать вопрос</a>
+        </nav><!-- sitenav sitenav__white -->
       </div><!-- container -->
       
     </header><!-- End of site-header -->
@@ -71,147 +98,148 @@
       SITE MAIN
       ============= -->
       <main class="site-main">
-        <section class="about-site-wrapper">
-          <div class="about-site">
-            <div class="container">
-              <div class="about-site-contain">
-                <h1 class="about-site-heading">Мы заботимся о <span class="about-site-heading-blue">ваших питомцах!</span></h1>
-                <p class="about-site-text">Вам и Вашему любимцу множество услуг по диагностике, профилактике заболеваний по лечению и уходу за Вашими животными. Профессионалы работающие в нашей клинике сделают все для того, чтобы быстро, эффективно и максимально безболезненно выполнить любие процедуры, которые необходимы Вашему домашнему любимцу.</p>
-                <a class="about-site-link" href="#">Наши услуги</a>
-              </div><!-- about-site-contain -->
-            </div><!-- container -->
-          </div><!-- about-site -->
-        </section><!-- about-site-wrapper -->
+        <section class="about-site">
+          <div class="container">
+            <div class="about-site__contain">
+              <h1 class="about-site__heading">Мы заботимся о <span class="about-site__heading-blue">ваших питомцах!</span></h1>
+              <p class="about-site__text">Вам и Вашему любимцу множество услуг по диагностике, профилактике заболеваний по лечению и уходу за Вашими животными. Профессионалы работающие в нашей клинике сделают все для того, чтобы быстро, эффективно и максимально безболезненно выполнить любие процедуры, которые необходимы Вашему домашнему любимцу.</p>
+              <a class="about-site__link" href="#">Наши услуги</a>
+            </div><!-- about-site__contain -->
+          </div><!-- container -->
+        </section><!-- about-site -->
+        
         
         <section class="clinic-info">
           <div class="container">
             <h3 class="visually-hidden">About clinic</h3>
-            <hr class="clinic-info-hr">
-            <blockquote class="clinic-info-comment">
-              Наша ветеринарная клиника готова уделить максимум внимания Вам и Вашему питамцу. Здоровье и благополучие Ваших животных очень важно для нас и мы стремимся оказать наилучшую возможную ветеринарную помощь.
-            </blockquote>
-            <hr class="clinic-info-hr">
-            <p class="clinic-info-autor">Оржоникидзевская Ветеринарная клиника</p>
+            <div class="clinic-info__decoration">
+              <blockquote class="clinic-info__comment">
+                Наша ветеринарная клиника готова уделить максимум внимания Вам и Вашему питамцу. Здоровье и благополучие Ваших животных очень важно для нас и мы стремимся оказать наилучшую возможную ветеринарную помощь.
+              </blockquote>
+            </div>
+            <p class="clinic-info__autor">Оржоникидзевская Ветеринарная клиника</p>
           </div><!-- container -->
         </section><!-- clinic-info -->
         
         <section class="our-services">
-          <h3 class="our-services-heading">Наши услуги</h3>
-          
-          <ul class="our-services-list">
+          <div class="container">
+            <h3 class="our-services__heading">Наши услуги</h3>
             
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Первичный осмотр</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Первичный осмотр</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Хирургическое вмешательство</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Дерматология</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Лабораторная диагностика</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">Офтальмология</span>
-              </a><!-- our-services-link -->
-            </li><!-- our-services-item -->
-            
-            <li class="our-services-item">
-              <a class="our-services-link" href="#">
-                <img class="our-services-link-img" src="#" alt="">
-                <span class="our-services-link-text">УЗИ
-                  диагностика</span>
-                </a><!-- our-services-link -->
-              </li><!-- our-services-item -->
+            <ul class="our-services__list">
               
-              <li class="our-services-item">
+              <li class="our-services__item">
                 <a class="our-services-link" href="#">
                   <img class="our-services-link-img" src="#" alt="">
-                  <span class="our-services-link-text">Чипирование</span>
+                  <span class="our-services-link-text">Первичный осмотр</span>
                 </a><!-- our-services-link -->
               </li><!-- our-services-item -->
               
-              <li class="our-services-item">
+              <li class="our-services__item">
                 <a class="our-services-link" href="#">
                   <img class="our-services-link-img" src="#" alt="">
-                  <span class="our-services-link-text">Международные паспорта</span>
+                  <span class="our-services-link-text">Первичный осмотр</span>
                 </a><!-- our-services-link -->
               </li><!-- our-services-item -->
               
-              <li class="our-services-item">
+              <li class="our-services__item">
                 <a class="our-services-link" href="#">
                   <img class="our-services-link-img" src="#" alt="">
-                  <span class="our-services-link-text">Вакцинация</span>
+                  <span class="our-services-link-text">Хирургическое вмешательство</span>
                 </a><!-- our-services-link -->
               </li><!-- our-services-item -->
               
-              <li class="our-services-item">
+              <li class="our-services__item">
                 <a class="our-services-link" href="#">
                   <img class="our-services-link-img" src="#" alt="">
-                  <span class="our-services-link-text">Стоматология</span>
+                  <span class="our-services-link-text">Дерматология</span>
                 </a><!-- our-services-link -->
               </li><!-- our-services-item -->
               
-              <li class="our-services-item">
+              <li class="our-services__item">
                 <a class="our-services-link" href="#">
                   <img class="our-services-link-img" src="#" alt="">
-                  <span class="our-services-link-text">Вызов на дом</span>
+                  <span class="our-services-link-text">Лабораторная диагностика</span>
                 </a><!-- our-services-link -->
               </li><!-- our-services-item -->
               
-            </ul><!-- our-services-list --> 
-            
-            <div class="about-active-iteam">
-              <img class="about-active-iteam-img" src="#" width="524" height="329" alt="Illness cat">
+              <li class="our-services__item">
+                <a class="our-services-link" href="#">
+                  <img class="our-services-link-img" src="#" alt="">
+                  <span class="our-services-link-text">Офтальмология</span>
+                </a><!-- our-services-link -->
+              </li><!-- our-services-item -->
               
-              <div class="about-active-iteam-right">
-                <h2 class="about-active-iteam-right-heading">
-                  Первичный осмотр
-                </h2>
+              <li class="our-services__item">
+                <a class="our-services-link" href="#">
+                  <img class="our-services-link-img" src="#" alt="">
+                  <span class="our-services-link-text">УЗИ
+                    диагностика</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
                 
-                <p class="about-active-iteam-right-text-1">По условиям акции в нашей клинике предоставляетса безплатная услуга “Дневной стационар” которая позволяет экономить Ваше время. Вы имеете возможность оставить у нас.</p>
+                <li class="our-services__item">
+                  <a class="our-services-link" href="#">
+                    <img class="our-services-link-img" src="#" alt="">
+                    <span class="our-services-link-text">Чипирование</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
                 
-                <p class="about-active-iteam-right-text-2">По условиям акции в нашей клинике предоставляетса безплатная услуга “Дневной стационар” которая позволяет экономить Ваше время. Вы имеете возможность оставить у нас.</p>
+                <li class="our-services__item">
+                  <a class="our-services-link" href="#">
+                    <img class="our-services-link-img" src="#" alt="">
+                    <span class="our-services-link-text">Международные паспорта</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
                 
-                <div class="about-active-iteam-info-box">
-                  <a class="active-iteam-money-link" href="#">
-                    <img class="active-iteam-money-img" src="#" alt="Money icon" width="21" height="21">
-                    <span class="active-iteam-money-text">Узнать цену</span>
-                  </a><!-- active-iteam-money-link -->
+                <li class="our-services__item">
+                  <a class="our-services-link" href="#">
+                    <img class="our-services-link-img" src="#" alt="">
+                    <span class="our-services-link-text">Вакцинация</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
+                
+                <li class="our-services__item">
+                  <a class="our-services-link" href="#">
+                    <img class="our-services-link-img" src="#" alt="">
+                    <span class="our-services-link-text">Стоматология</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
+                
+                <li class="our-services__item">
+                  <a class="our-services-link" href="#">
+                    <img class="our-services-link-img" src="#" alt="">
+                    <span class="our-services-link-text">Вызов на дом</span>
+                  </a><!-- our-services-link -->
+                </li><!-- our-services-item -->
+                
+              </ul><!-- our-services-list --> 
+              
+              <div class="about-active__iteam">
+                <img class="about-active-iteam-img" src="#" width="524" height="329" alt="Illness cat">
+                
+                <div class="about-active-iteam-right">
+                  <h2 class="about-active-iteam-right-heading">
+                    Первичный осмотр
+                  </h2>
                   
-                  <a class="active-iteam-write-link" href="#">
-                    <img class="active-iteam-write-img" src="#" alt="Write icon" width="21" height="21">
-                    <span class="active-iteam-write-text">Записаться на приём</span>
-                  </a><!-- active-iteam-info-link -->
-                </div><!-- about-active-iteam-info-links -->
-              </div><!-- about-active-iteam-right -->
-            </div><!-- about-active-iteam -->
+                  <p class="about-active-iteam-right-text-1">По условиям акции в нашей клинике предоставляетса безплатная услуга “Дневной стационар” которая позволяет экономить Ваше время. Вы имеете возможность оставить у нас.</p>
+                  
+                  <p class="about-active-iteam-right-text-2">По условиям акции в нашей клинике предоставляетса безплатная услуга “Дневной стационар” которая позволяет экономить Ваше время. Вы имеете возможность оставить у нас.</p>
+                  
+                  <div class="about-active-iteam-info-box">
+                    <a class="active-iteam-money-link" href="#">
+                      <img class="active-iteam-money-img" src="#" alt="Money icon" width="21" height="21">
+                      <span class="active-iteam-money-text">Узнать цену</span>
+                    </a><!-- active-iteam-money-link -->
+                    
+                    <a class="active-iteam-write-link" href="#">
+                      <img class="active-iteam-write-img" src="#" alt="Write icon" width="21" height="21">
+                      <span class="active-iteam-write-text">Записаться на приём</span>
+                    </a><!-- active-iteam-info-link -->
+                  </div><!-- about-active-iteam-info-links -->
+                </div><!-- about-active-iteam-right -->
+              </div><!-- about-active-iteam -->
+          </div>
           </section><!-- our-services -->
           
           <section class="be-in-touch">
@@ -337,8 +365,8 @@
                     <a href="#" class="footer-link">Контакты</a>
                   </li>
                 </ul><!-- End of this-list <-->  
-
-
+                
+                
                 <p class="working-days-1">
                   <p class="working-days-full-1"><strong>Пн - Пт</strong> 8:00 - 18:00</p>
                   <!-- <p class="working-days-full-2"><strong>Сб - Вс</strong> 8:00 - 14:00</p> -->

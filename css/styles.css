@@ -35,6 +35,7 @@
 }
 
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -45,9 +46,12 @@ html {
 }
 
 body {
-  font-family: "Futura PT", "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 0;
   margin: 0;
+  font-family: "Futura PT", "Arial", sans-serif;
   line-height: 1.5;
 }
 
@@ -74,7 +78,7 @@ img {
   overflow: hidden;
 }
 
-.about-address-wrapper {
+.site-header__wrapper {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -82,31 +86,20 @@ img {
   background-color: #F9F8F8;
 }
 
-.about-address {
+.site-address {
   display: flex;
   align-items: center;
 }
 
-.header-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.site-address__text {
   display: flex;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: #333;
+  align-items: center;
+  margin-left: 180px;
+  margin-right: 50px;
 }
 
-.address-link {
-  margin-right: 106px;
-  color: #333;
-  text-decoration: none;
-  margin-left: 180px;
-} 
-
-.address-link::before {
-  display: inline-block;
+.site-address__text::before {
+  display: block;
   margin-right: 9px;
   width: 14px;
   height: 13px;
@@ -117,14 +110,20 @@ img {
   content: "";
 }
 
-.tel-numbers {
-  display: block;
-  margin: 0;
-  margin-right: 98px;
+.site-address__link {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
 }
 
-.tel-numbers::before {
-  display: inline-block;
+.phones {
+  display: flex;
+  align-items: center;
+}
+
+.phones::before {
+  display: block;
   margin-right: 9px;
   width: 14px;
   height: 13px;
@@ -135,17 +134,29 @@ img {
   content: "";
 }
 
-
-.tel-numbers-link {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.tel-numbers__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-right: auto;
+  margin-left: auto;
+  word-spacing: nowrap;
 }
 
+.tel-numbers__iteam {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
 
-.tel-numbers-link ~ .tel-numbers-link::before {
-  margin-right: 9px;
-  margin-left: 9px;
+.tel-numbers__iteam ~
+.tel-numbers__iteam::before {
+  position: absolute;
+  z-index: 1;
+  left: 0;
   background-color: #ffbd54;
   border-radius: 50%;
   width: 4px;
@@ -153,18 +164,37 @@ img {
   content: "";
 }
 
-.tel-numbers-link:hover {
+.tel-numbers__link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  padding-left: 9px;
+  padding-right: 9px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tel-numbers__link:hover {
   color: #ffdb54;
 }
 
-.tel-numbers-link:active {
+.tel-numbers__link:active {
   color: #333333;
   opacity: 0.5;
 }
 
+.working-days {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: auto;
+}
 
 .working-days::before {
-  display: inline-block;
+  display: block;
   margin-right: 7px;
   width: 14px;
   height: 13px;
@@ -175,18 +205,27 @@ img {
   content: "";
 }
 
-.working-days-full {
+.working-days__list {
+  display: flex;
+  align-items: center;
+}
+
+.working-days__iteam {
   margin-right: 17px;
   line-height: 21px;
   font-weight: 500;
   width: 127px;
 }
 
-.working-days-full:last-child {
+.working-days__weeks {
+  font-weight: 600;
+}
+
+.working-days__iteam:last-child {
   margin-right: 0;
 }
 
-.white-header {
+.sitenav__white {
   position: relative;
   z-index: 5;
   display: flex;
@@ -195,56 +234,67 @@ img {
   font-size: 16px;
 }
 
-.logo-link {
+.logo {
   position: absolute;
   z-index: 1;
-  width: 178px;
-  height: 86px;
   left: 0;
   right: 0;
+  width: 178px;
+  height: 86px;
+}
+
+.logo__link {
+  position: absolute;
+  z-index: 3;
+  width: 178px;
+  height: 86px;
   transition: 0.3s ease;
 }
 
-.logo-link:hover {
+.logo__link:hover {
   opacity: 0.8;
 }
 
-.logo-link:active {
+.logo__link:active {
   opacity: 0.5;
 }
 
-.logo {
+.logo__img {
   display: block;
   width: 178px;
   height: 86px;
 }
 
-.header-list {
+.sitenav__list {
   margin: 0;
-  margin-left: 115px;
-  margin-right: 133px;
+  margin-left: 250px;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333;
 }
 
-.header-link {
-  padding: 19px 27px;
+.header__link {
+  padding: 17px 27px;
   white-space: nowrap;
   color: #333333;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.header-link:hover {
+.header__link:hover {
   background-color: #ffbd54;
 }
 
-.header-link:active {
+.header__link:active {
   background-color: #ffbd54;
   opacity: 0.5;
 }
 
-.header-link-active:before {
+.header__link--active:before {
   display: inline-block;
   vertical-align: middle;
   margin-right: 14px;
@@ -257,25 +307,26 @@ img {
   content: "";
 }
 
-.header-ask-question {
+.header__ask-question {
   white-space: nowrap;
   color: #333333;
   font-weight: 500;
+  margin-left: auto;
   padding: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.header-ask-question:hover {
+.header__ask-question:hover {
   color: #fff;
   background-color: #333333;
 }
 
-.header-ask-question:active {
+.header__ask-question:active {
   opacity: 0.5;
 }
 
-.header-ask-question:before {
+.header__ask-question:before {
   display: inline-block;
   vertical-align: middle;
   margin-right: 14px;
@@ -288,20 +339,23 @@ img {
   content: "";
 }
 
-.about-site-wrapper {
-  min-height: 924px;
-  background-color: #e5e5e5;
+/* ==== SITE MAIN ==== */ 
+/* about-site */
+.site-main {
+  flex-grow: 1;
+  background-color: #f9f9f9;
 }
 
 .about-site {
-  min-height: 924px;
+  min-height: 800px;
+  /* background-color: #e5e5e5; */
   background-image: url(../img/about-site.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto 100%;
+  background-size: contain;
 }
 
-.about-site-contain {
+.about-site__contain {
   width: 610px;
   margin-left: auto;
   padding-top: 146px;
@@ -309,7 +363,7 @@ img {
   line-height: 21px;
 }
 
-.about-site-heading {
+.about-site__heading {
   margin: 0;
   font-size: 70px;
   line-height: 64px;
@@ -317,19 +371,18 @@ img {
   margin-bottom: 29px;
 }
 
-.about-site-heading-blue {
+.about-site__heading-blue {
   color: rgb(65, 236, 241);
 }
 
-.about-site-text {
+.about-site__text {
   margin: 0;
   margin-bottom: 38px;
   width: 495px;
-
   color: #949494;
 }
 
-.about-site-link {
+.about-site__link {
   padding: 15px 48px;
   color: #FFFFFF;
   background-color: #333333;
@@ -338,34 +391,57 @@ img {
   transition: all 0.3s ease;
 }
 
-.about-site-link:hover {
+.about-site__link:hover {
   color: #333333;
   background-color: #FFBD54;
 }
 
-.about-site-link:active {
+.about-site__link:active {
   opacity: 0.5;
 }
 
-.clinic-info-hr {
-  border: 1px solid #DBDBDB;
+/* clinic-info */
+.clinic-info__decoration {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clinic-info__decoration::before {
   width: 140px;
+  height: 2px;
+  background-color: #DBDBDB;;
+  content: "";
 }
 
-.clinic-info-comment {
+.clinic-info__decoration::after {
+  width: 140px;
+  height: 2px;
+  background-color: #DBDBDB;;
+  content: "";
+}
+
+.clinic-info__comment {
+  position: relative;
+  z-index: 1;
   margin: 45px auto;
-  width: 845px;
+  width: 755px;
+  font-size: 20px;
+  line-height: 26px;
   text-align: center;
+  color: #949494;
 }
 
-.clinic-info-comment::before {
+.clinic-info__comment::before {
+  position: absolute;
+  z-index: 1;
   display: block;
+  left: -155px;
+  top: -40%;
   transform: rotate(-180deg);
   margin-right: 14px;
   width: 51px;
   height: 42px;
-  top: 0;
-  right: 0;
   background-image: url(../img/tirnoq.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -373,13 +449,15 @@ img {
   content: "";
 }
 
-.clinic-info-comment::after {
+.clinic-info__comment::after {
+  position: absolute;
+  z-index: 1;
   display: block;
   margin-right: 14px;
   width: 51px;
   height: 42px;
-  left: 0;
-  bottom: 0;
+  right: -155px;
+  bottom: 0%;
   background-image: url(../img/tirnoq.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -387,7 +465,7 @@ img {
   content: "";
 }
 
-.clinic-info-autor {
+.clinic-info__autor {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
@@ -397,6 +475,28 @@ img {
   font-size: 20px;
   line-height: 26px;
   color: #333333;
+}
+
+/* our-services */
+.our-services {
+  padding-top: 190px;
+  padding-bottom: 130px;
+}
+
+.our-services__heading {
+  margin: 0;
+  margin-bottom: 80px;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: center;
+  color: #333333;
+}
+
+.our-services__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
 }
 
 .clinic-feedback-wrapper {
@@ -534,34 +634,8 @@ img {
   color: #333;
 }
 
-/* .footer-working-days,
-.footer-working-days-full,
-.footer-working-days-part {
-  margin: 0;
-  white-space: nowrap;
-  width: 150px;
-  height: 40px;
-}
-
-.working-days-weeks {
-  font-weight: 500;
-}
-
-.footer-working-days:before {
-  display: flex;
-  margin-right: 7px;
-  width: 14px;
-  height: 13px;
-  background-image: url(../img/days.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
-  content: "";
-} */
-
 .working-days-1 {
   margin: 0;
-  /* margin-right: 122px; */
 }
 
 .working-days-1::before{
@@ -626,6 +700,205 @@ content: "";
   text-decoration: none;
 }
 
+/* ==== SERVISES PAGE ==== */
 
+.hero-container {
+  display: flex;
+}
+
+.hero {
+  padding-top: 118px;
+  padding-bottom: 80px;
+  background-image: url(../img/green-parrot.png);
+  background-size: 435px 435px;
+  background-repeat: no-repeat;
+  background-position: center right calc(50% - 500px);
+}
+
+.hero__wrapper {
+  width: 450px;
+  margin-left: 157px;
+}
+
+.hero__heading {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-size: 70px;
+  line-height: 64px;
+  color: #333333;
+}
+
+.hero__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+}
+
+.servises-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.servises-item {
+  display: flex;
+  margin: 0 11px 30px 11px;
+  flex-direction: column;
+  width: 305px;
+  background: #FFFFFF;
+  border-radius: 5px 5px 0px 0px;
+  padding: 58px 45px 45px 53px;
+  background-image: url(../img/white-foot.png);
+  background-size: 108px 94px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  cursor: pointer;
+  transition: filter 0.3s ease,
+  background-color 0.3s ease;
+}
+
+.servises-item:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.2));
+}
+
+.servises-item:hover .servises-iteam__link {
+  background-color: #000000;
+}
+
+.servises-item:active .servises-iteam__link {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.servises-item:before {
+  margin-bottom: 22px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: "";
+}
+
+.servises-item-1:before {
+  width: 54px;
+  height: 77px;
+  background-image: url(../img/doctor-man.png);
+}
+
+.servises-item-2:before {
+  width: 61px;
+  height: 76px;
+  background-image: url(../img/doctor-woman.png);
+}
+
+.servises-item-3:before {
+  width: 72px;
+  height: 78px;
+  background-image: url(../img/dropper.png);
+}
+
+.servises-item-4:before {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/dermatology.png);
+}
+
+.servises-item-5::before {
+  width: 78px;
+  height: 78px;
+  background-image: url(../img/microscope.png);
+}
+
+.servises-item-6:before {
+  width: 76px;
+  height: 76px;
+  background-image: url(../img/ophthalmology.png);
+}
+
+.servises-item-7:before {
+  width: 77px;
+  height: 77px;
+  background-image: url(../img/ultrasound-diagnostics.png);
+}
+
+.servises-item-8:before {
+  width: 40px;
+  height: 77px;
+  background-image: url(../img/chipping.png);
+}
+
+.servises-item-9::before {
+  width: 87px;
+  height: 78px;
+  background-image: url(../img/international-passports.png);
+}
+
+.servises-item-10:before {
+  width: 68px;
+  height: 76px;
+  background-image: url(../img/vacsination.png);
+}
+
+.servises-item-11:before {
+  width: 78px;
+  height: 78px;
+  background-image: url(../img/stomotology.png);
+}
+
+.servises-item-12:before {
+  width: 77px;
+  height: 77px;
+  background-image: url(../img/amergancy-call.png);
+}
+
+.servises-iteam__heading {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 32px;
+  line-height: 34px;
+  color: #333333;
+}
+
+.servises-iteam__text {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+}
+
+.servises-iteam__link {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.servises-iteam__link-blue {
+  background-color: #78C0DE;
+}
+
+.servises-iteam__link-orange {
+  background-color: #FFBD54;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/green-parrot@2x.png);
+  }
+}
 
 
